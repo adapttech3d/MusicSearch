@@ -3,7 +3,7 @@
 """
 Created on Wed Nov  8 11:21:01 2023
 
-@author: johnfreese
+@author: icecold
 """
 
 import requests

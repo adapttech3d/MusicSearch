@@ -3,7 +3,7 @@
 """
 Created on Wed Nov  8 17:16:16 2023
 
-@author: johnfreese
+@author: icecold
 """
 import requests
 import sqlite3

@@ -3,7 +3,7 @@
 """
 Created on Wed Nov  8 11:32:54 2023
 
-@author: johnfreese
+@author: icecold
 """
 
 import requests
@@ -29,7 +29,7 @@ cur = conn.cursor()  # Create a cursor for executing SQL statements
 cur.executescript('''
 DROP TABLE IF EXISTS Artist;
 DROP TABLE IF EXISTS Album;
-DROP TABLE IF EXISTS Track;
+
 
 CREATE TABLE Artist (
     artist_id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
