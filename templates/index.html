@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>John's Rad Music Search Tool</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='image.jpeg') }}");
+            background-size: cover;
+            color: white;  /* Set text color to white */
+        }
+        h1 {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        table {
+            font-size: 100%; /* Reset font size to default */
+            border-collapse: collapse;
+            background-color: cream; /* Set table background color to cream */
+        }
+        table, th, td {
+            border: 1px solid black; /* Add borders to table, th, and td elements */
+        }
+        th, td {
+            padding: 8px; /* Add padding for th and td elements */
+            text-align: left; /* Align text to the left within cells */
+            color: black; /* Set font color to black */
+        }
+    </style>
+</head>
+<body>
+    <h1>John's Rad Music Search Tool</h1>
+    <form method="POST">
+        <label for="query">Find what your heart desires at Last FM</label>
+        <input type="text" name="query" id="query">
+        <input type="submit" value="Search Now">
+    </form>
+    {% if search_results %}
+        <h2>Search Results:</h2>
+        <table>
+            <tr>
+                <th>Artist Name</th>
+                <th>Album Title</th>
+                <th>Song Title</th>
+            </tr>
+            {% for result in search_results %}
+                <tr>
+                    <td>{{ result[0] }}</td>
+                    <td>{{ result[1] }}</td>
+                    <td>{{ result[2] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% elif no_matches %}
+        <p>No Matches to Display</p>
+    {% endif %}
+</body>
+</html>
+
+
+
