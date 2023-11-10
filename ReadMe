@@ -1,0 +1,8 @@
+# This project creates a simple webapp that let's a user search a stored music database for some text.  
+#the project requires sqlite3 and Flask
+#run getjazzalbums first to retrieve the top 100 Jazz Albums from last.fm and load them into your lastfm.db
+#run getalbumtracks to retrieve the tracks for the Jazz Ablums and load them into the lastfm.db
+#create a file named config.json that contains your last.fm API_KEY in order to run getalbumtracks and getjazzalbums
+#App.py is the Flask app for the webserver
+#The app is intended to be a backend for a front end to be developed by a 3rd party. 
+#the front end of this app is only to test the backend and display search results
